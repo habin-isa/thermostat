@@ -1,10 +1,12 @@
+const DEFAULT_TEMPERATURE = 20;
+
 beforeEach(function() {
   thermostat = new Thermostat();
 });
 
 describe('Thermostat', function() {
   it('should return 20 degrees when created', function(){
-    expect(thermostat.temperature).toEqual(20);
+    expect(thermostat.temperature).toEqual(DEFAULT_TEMPERATURE);
   });
 });
 
@@ -51,7 +53,7 @@ describe('power saving mode off', function() {
 describe('reset temperature', function() {
   it('resets the temperature to 20', function() {
     thermostat.resetTemperature();
-    expect(thermostat.temperature).toEqual(20);
+    expect(thermostat.temperature).toEqual(DEFAULT_TEMPERATURE);
   });
 });
 
