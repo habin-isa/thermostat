@@ -54,3 +54,10 @@ describe('reset temperature', function() {
     expect(thermostat.temperature).toEqual(20);
   });
 });
+
+describe('energy usage', function(){
+  it('should state low usage if temperature is less than 18 degrees', function() {
+    thermostat.down(3);
+    expect(thermostat.usage()).toEqual('low usage');
+  });
+});

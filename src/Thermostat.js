@@ -37,3 +37,13 @@ Thermostat.prototype.maxTemperature = function() {
 Thermostat.prototype.resetTemperature = function() {
   this.temperature = DEFAULT_TEMPERATURE;
 }
+
+Thermostat.prototype.usage = function() {
+  if(this.temperature < 18){
+    return 'low usage';
+  } else if (25 >= this.temperature >= 18) {
+    return 'medium usage';
+  } else {
+    return 'high usage';
+  };
+};
