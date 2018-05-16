@@ -33,3 +33,7 @@ Thermostat.prototype.maxTemperature = function() {
     return 32;
   }
 }
+
+Thermostat.prototype.resetTemperature = function() {
+  this.temperature = DEFAULT_TEMPERATURE;
+}
