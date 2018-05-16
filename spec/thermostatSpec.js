@@ -8,9 +8,16 @@ describe('Thermostat', function() {
   });
 });
 
-describe('Up', function() {
+describe('up', function() {
   it('should increase the temperate by 5', function() {
     thermostat.up(5);
     expect(thermostat.temperature).toEqual(25);
+  });
+});
+
+describe('down', function() {
+  it('should decrease the temerature by 5', function() {
+    thermostat.down(5);
+    expect(thermostat.temperature).toEqual(15);
   });
 });
