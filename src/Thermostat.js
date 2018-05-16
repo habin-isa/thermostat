@@ -1,3 +1,5 @@
+const DEFAULT_TEMPERATURE = 20;
+
 function Thermostat() {
-  this.temperature = 20
+  this.temperature = DEFAULT_TEMPERATURE;
 };
