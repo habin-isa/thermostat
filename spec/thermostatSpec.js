@@ -20,4 +20,8 @@ describe('down', function() {
     thermostat.down(5);
     expect(thermostat.temperature).toEqual(15);
   });
+
+  it('should throw error if temperature would go below 10', function() {
+    expect(function() { thermostat.down(11); } ).toThrow("Minimum temperature is 10")
+  });
 });
