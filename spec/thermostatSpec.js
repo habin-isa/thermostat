@@ -64,4 +64,9 @@ describe('energy usage', function(){
   it('should state medium usage if temperature is between 17 and 26', function() {
     expect(thermostat.usage()).toEqual('medium usage');
   });
+
+  it('should state high usage if temperature is more than 25', function() {
+    thermostat.up(6);
+    expect(thermostat.usage()).toEqual('high usage');
+  });
 });
