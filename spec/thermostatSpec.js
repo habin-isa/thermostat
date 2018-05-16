@@ -25,3 +25,10 @@ describe('down', function() {
     expect(function() { thermostat.down(11); } ).toThrow("Minimum temperature is 10")
   });
 });
+
+describe('power saving mode on', function() {
+  it('should show a maximum temperature of 25 degrees', function() {
+    thermostat.powerSaveModeOn();
+    expect(thermostat.maxTemperature).toEqual(25);
+  });
+});

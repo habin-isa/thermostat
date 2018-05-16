@@ -3,6 +3,7 @@ const MINIMUM_TEMPERATURE = 10;
 
 function Thermostat() {
   this.temperature = DEFAULT_TEMPERATURE;
+  this.maxTemperature = 25;
 };
 
 Thermostat.prototype.up = function(num) {
@@ -15,4 +16,8 @@ Thermostat.prototype.down = function(num) {
   } else {
   this.temperature -= num
   }
+};
+
+Thermostat.prototype.powerSaveModeOn = function() {
+  this.maxTemperature = 25;
 };
