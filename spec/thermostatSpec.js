@@ -43,6 +43,13 @@ describe('power saving mode on', function() {
   it('should return true by default', function() {
     expect(thermostat.isPowerSaveOn).toEqual(true)
   });
+
+  it('should reset temperature to new max', function() {
+    thermostat.powerSaveOff()
+    thermostat.up(6)
+    thermostat.powerSaveOn()
+    expect(thermostat.temperature).toEqual(25)
+  })
 });
 
 describe('power saving mode off', function() {
