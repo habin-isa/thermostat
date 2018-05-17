@@ -14,7 +14,8 @@ $(document).ready(function() {
 
   $('#PowerSaveOn').on('click', function() {
     thermostat.powerSaveOn();
-      $('#powersave').text('ON');
+    thermostat.maxTemperature();
+    $('#powersave').text('ON');
   })
 
   $('#PowerSaveOff').on('click', function() {
