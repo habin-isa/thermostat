@@ -15,7 +15,12 @@ describe('up', function() {
   });
 
   it('should throw an error', function() {
-    expect(function() { thermostat.up(6) } ).toThrow("Maximum temperature is 25")
+    expect(function() { thermostat.up(6) } ).toThrow("Maximum temperature would be exceeded!")
+  })
+
+  it('should throw an error', function() {
+    thermostat.powerSaveOff();
+    expect(function() { thermostat.up(16) } ).toThrow("Maximum temperature would be exceeded!")
   })
 });
 
