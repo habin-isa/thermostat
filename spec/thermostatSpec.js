@@ -1,5 +1,3 @@
-const DEFAULT_TEMPERATURE = 20;
-
 beforeEach(function() {
   thermostat = new Thermostat();
 });
