@@ -3,11 +3,31 @@
   <title>SmurtThermosturt</title>
   <head>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="thermostat.css">
     <script src="src/Thermostat.js"></script>
     <script src="interface.js"></script>
   </head>
 
+  <h1> SMURT THERMOSTURT</h1>
+
   <body id="body">
+    <div class="cube">
+
+       <div class="front"><h1 class="temperature" style="border: transparent">0</h1></div>
+
+       <div class="back"><h1 class="temperature" style="border: transparent">0</h1></div>
+
+       <div class="top"><h1 class="temperature" style="border: transparent">0</h1></div>
+
+       <div class="bottom"><h1 class="temperature" style="border: transparent">0</h1></div>
+
+       <div class="left"><h1 class="temperature" style="border: transparent">0</h1></div>
+
+       <div class="right"><h1 class="temperature" style="border: transparent">0</h1></div>
+
+
+     </div>
+
     <div class="controls">
       <button type="button" id="Up">Up</button>
       <button type="button" id="Down">Down</button>
@@ -17,7 +37,6 @@
     </div>
 
     <div class="display">
-      <h1 id="temperature">0</h1>
       <h1>Power Swurve is: </h1>
       <h1 id="powersave">ON</h1>
 
