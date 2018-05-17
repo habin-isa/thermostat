@@ -22,4 +22,8 @@ $(document).ready(function() {
     $('#powersave').text('OFF');
   })
 
+  $('#Reset').on('click', function() {
+    thermostat.resetTemperature();
+    $('#temperature').text(thermostat.temperature);
+  })
 })
