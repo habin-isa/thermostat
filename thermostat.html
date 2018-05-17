@@ -2,21 +2,22 @@
 <html>
   <title>SmurtThermosturt</title>
   <head>
-    <script src="src/Thermostat.js">
-    </script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="src/Thermostat.js"></script>
+    <script src="interface.js"></script>
   </head>
 
-  <body>
+  <body id="body">
     <div class="controls">
-      <button type="button" name="Up">Up</button>
-      <button type="button" name="Down">Down</button>
-      <button type="button" name="PowerSaveOn">Power Swurve on</button>
-      <button type="button" name="PowerSaveOff">Power Swurve off</button>
-      <button type="button" name="Reset">Reset Temperature</button>
+      <button type="button" id="Up">Up</button>
+      <button type="button" id="Down">Down</button>
+      <button type="button" id="PowerSaveOn">Power Swurve on</button>
+      <button type="button" id="PowerSaveOff">Power Swurve off</button>
+      <button type="button" id="Reset">Reset Temperature</button>
     </div>
 
     <div class="display">
-      <h1 id="temperature">20</h1>
+      <h1 id="temperature">0</h1>
       <h1 id="powersave">on</h1>
     </div>
 
