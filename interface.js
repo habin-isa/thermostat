@@ -11,4 +11,15 @@ $(document).ready(function() {
     thermostat.down(1);
     $('#temperature').text(thermostat.temperature);
   })
+
+  $('#PowerSaveOn').on('click', function() {
+    thermostat.powerSaveOn();
+      $('#powersave').text('ON');
+  })
+
+  $('#PowerSaveOff').on('click', function() {
+    thermostat.powerSaveOff();
+    $('#powersave').text('OFF');
+  })
+
 })

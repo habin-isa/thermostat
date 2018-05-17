@@ -18,11 +18,11 @@ Thermostat.prototype.down = function(num) {
   }
 };
 
-Thermostat.prototype.powerSaveModeOn = function() {
+Thermostat.prototype.powerSaveOn = function() {
   this.isPowerSaveOn = true
 };
 
-Thermostat.prototype.powerSaveModeOff = function() {
+Thermostat.prototype.powerSaveOff = function() {
   this.isPowerSaveOn = false
 };
 
