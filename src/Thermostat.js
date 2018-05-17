@@ -7,7 +7,11 @@ function Thermostat() {
 };
 
 Thermostat.prototype.up = function(num) {
+  if(this.temperature + num > this.maxTemperature()) {
+    throw("Maximum temperature is 25")
+  } else {
   this.temperature += num
+  }
 };
 
 Thermostat.prototype.down = function(num) {

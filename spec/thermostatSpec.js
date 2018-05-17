@@ -13,6 +13,10 @@ describe('up', function() {
     thermostat.up(5);
     expect(thermostat.temperature).toEqual(25);
   });
+
+  it('should throw an error', function() {
+    expect(function() { thermostat.up(6) } ).toThrow("Maximum temperature is 25")
+  })
 });
 
 describe('down', function() {
@@ -66,6 +70,7 @@ describe('energy usage', function(){
   });
 
   it('should state high usage if temperature is more than 25', function() {
+    thermostat.powerSaveOff()
     thermostat.up(6);
     expect(thermostat.usage()).toEqual('high usage');
   });
